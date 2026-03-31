@@ -1,0 +1,48 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Guest Entry App",
+        "description": "Enter the URL of the Guest Entry app and the internal secret. If the app is running, the secret is auto-read from `{secret_file}`.",
+        "data": {
+          "addon_url": "App URL",
+          "internal_secret": "Internal Secret"
+        },
+        "data_description": {
+          "addon_url": "Base URL of the Guest Entry app (e.g. http://localhost:7979)",
+          "internal_secret": "Secret shared between HA and the app for internal API calls"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot connect to the Guest Entry app. Check the URL.",
+      "invalid_auth": "Invalid internal secret.",
+      "unknown": "Unexpected error. Check the logs."
+    },
+    "abort": {
+      "already_configured": "Guest Entry is already configured.",
+      "cannot_connect": "Cannot connect to the Guest Entry app."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Assign Entities to Users",
+        "description": "Select a user to configure their allowed entities, or save when done.",
+        "data": {
+          "user": "User"
+        }
+      },
+      "user_entities": {
+        "title": "Entities for {username}",
+        "description": "Select which entities {username} is allowed to control.",
+        "data": {
+          "entity_ids": "Allowed entities"
+        }
+      }
+    },
+    "abort": {
+      "cannot_connect": "Cannot connect to the Guest Entry app."
+    }
+  }
+}

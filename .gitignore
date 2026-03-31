@@ -1,0 +1,37 @@
+# Local dev only — never committed
+local/
+*.local.*
+docker-compose.local.yml
+.env
+.env.*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+*.dist-info/
+.venv/
+venv/
+
+# Node / pnpm
+node_modules/
+.pnpm-store/
+
+# Data files (only exist at runtime)
+ha-guest-entry/data/
+
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+cmd.MD

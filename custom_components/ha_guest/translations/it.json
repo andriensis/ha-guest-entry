@@ -1,0 +1,48 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connetti all'app Guest Entry",
+        "description": "Inserisci l'URL dell'app Guest Entry e il segreto interno. Se l'app è in esecuzione, il segreto viene letto automaticamente da `{secret_file}`.",
+        "data": {
+          "addon_url": "URL dell'app",
+          "internal_secret": "Segreto interno"
+        },
+        "data_description": {
+          "addon_url": "URL base dell'app Guest Entry (es. http://localhost:7979)",
+          "internal_secret": "Segreto condiviso tra HA e l'app per le chiamate API interne"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Impossibile connettersi all'app Guest Entry. Controlla l'URL.",
+      "invalid_auth": "Segreto interno non valido.",
+      "unknown": "Errore imprevisto. Controlla i log."
+    },
+    "abort": {
+      "already_configured": "Guest Entry è già configurato.",
+      "cannot_connect": "Impossibile connettersi all'app Guest Entry."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Assegna entità agli utenti",
+        "description": "Seleziona un utente per configurare le entità consentite, oppure salva quando hai finito.",
+        "data": {
+          "user": "Utente"
+        }
+      },
+      "user_entities": {
+        "title": "Entità per {username}",
+        "description": "Seleziona le entità che {username} può controllare.",
+        "data": {
+          "entity_ids": "Entità consentite"
+        }
+      }
+    },
+    "abort": {
+      "cannot_connect": "Impossibile connettersi all'app Guest Entry."
+    }
+  }
+}

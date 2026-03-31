@@ -1,0 +1,13 @@
+{
+  "domain": "ha_guest",
+  "name": "Guest Entry",
+  "config_flow": true,
+  "documentation": "https://github.com/andriensis/ha-guest-entry",
+  "issue_tracker": "https://github.com/andriensis/ha-guest-entry/issues",
+  "hassio": ["ha_guest"],
+  "dependencies": [],
+  "codeowners": ["@andriensis"],
+  "requirements": [],
+  "version": "1.0.0",
+  "iot_class": "local_polling"
+}

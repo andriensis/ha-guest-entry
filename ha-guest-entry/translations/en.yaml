@@ -1,0 +1,34 @@
+configuration:
+  instance_name:
+    name: Instance name
+    description: Displayed on the guest login screen (e.g. "My Home")
+  session_duration_hours:
+    name: Session duration (hours)
+    description: How long a guest JWT token remains valid before re-login is required
+  max_login_attempts:
+    name: Max login attempts
+    description: Failed login attempts before an IP or user is locked out
+  lockout_duration_minutes:
+    name: Lockout duration (minutes)
+    description: How long a locked-out IP or user must wait before trying again
+  users:
+    name: Guest users
+    description: List of guest accounts and their allowed entities
+    username:
+      name: Username
+    password:
+      name: Password
+    display_name:
+      name: Display name
+      description: Optional friendly name shown to the guest (falls back to username)
+    enabled:
+      name: Enabled
+      description: Uncheck to temporarily disable this guest without deleting their account
+    allowed_entities:
+      name: Allowed entities
+      entity_id:
+        name: Entity ID
+        description: The Home Assistant entity ID (e.g. light.living_room)
+      label:
+        name: Label
+        description: Optional display name for guests (falls back to the entity's friendly name)
